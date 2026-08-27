@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MCBE — Addons, texturas e mapas para Minecraft Bedrock</title>
+<meta name="description" content="Catálogo de addons, texturas e mapas para Minecraft Bedrock. Encontre, pesquise e baixe conteúdos criados pela comunidade.">
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/addon.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#/" class="logo" aria-label="MCBE — início">
+      <span class="logo-block" aria-hidden="true"></span>
+      <span class="logo-text">MC<em>BE</em></span>
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
+      <a href="#/" data-nav="home">Início</a>
+      <a href="#/catalogo/addons" data-nav="addons">Addons</a>
+      <a href="#/catalogo/texturas" data-nav="texturas">Texturas</a>
+      <a href="#/catalogo/mapas" data-nav="mapas">Mapas</a>
+      <a href="#/categorias" data-nav="categorias">Categorias</a>
+      <a href="#/sobre" data-nav="sobre">Sobre</a>
+    </nav>
+
+    <div class="header-actions">
+      <form class="header-search" id="headerSearchForm" role="search">
+        <input type="search" id="headerSearchInput" placeholder="Pesquisar addons, mapas, texturas…" aria-label="Pesquisar">
+        <button type="submit" aria-label="Pesquisar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+      </form>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <div id="view-root"></div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-block small" aria-hidden="true"></span>
+      <span class="logo-text">MC<em>BE</em></span>
+      <p>Catálogo aberto de addons, texturas e mapas para Minecraft Bedrock, feito pela comunidade.</p>
+    </div>
+    <div class="footer-links">
+      <div>
+        <h4>Explorar</h4>
+        <a href="#/catalogo/addons">Addons</a>
+        <a href="#/catalogo/texturas">Texturas</a>
+        <a href="#/catalogo/mapas">Mapas</a>
+        <a href="#/favoritos">Favoritos</a>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <a href="#/sobre">Sobre o MCBE</a>
+        <a href="#/categorias">Categorias</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>MCBE não é afiliado à Mojang ou à Microsoft. Minecraft é marca registrada da Mojang Studios.</p>
+  </div>
+</footer>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<!-- Templates lidos pelo JS puro, sem frameworks -->
+<template id="tpl-card">
+  <article class="addon-card">
+    <a class="card-thumb" href="#">
+      <img loading="lazy" alt="">
+      <span class="card-category"></span>
+    </a>
+    <div class="card-body">
+      <div class="card-top">
+        <h3><a href="#"></a></h3>
+        <button class="fav-btn" type="button" aria-label="Favoritar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-6.7-4.35-9.3-8.1C1 10.1 1.6 6.6 4.6 5.1c2.3-1.1 4.6-.2 5.9 1.6l1.5 2 1.5-2c1.3-1.8 3.6-2.7 5.9-1.6 3 1.5 3.6 5 1.9 7.8C18.7 16.65 12 21 12 21z"/></svg>
+        </button>
+      </div>
+      <p class="card-desc"></p>
+      <div class="card-meta">
+        <span class="card-author"></span>
+        <span class="card-version"></span>
+      </div>
+      <div class="card-foot">
+        <span class="card-downloads"></span>
+        <a class="card-cta" href="#">Ver addon</a>
+      </div>
+    </div>
+  </article>
+</template>
+
+<script src="js/loader.js"></script>
+<script src="js/search.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/home.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
