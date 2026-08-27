@@ -1,0 +1,66 @@
+/* ---------- Página individual do addon ---------- */
+.addon-page{ max-width: var(--container); margin:0 auto; padding: 40px 24px 80px; }
+
+.breadcrumb{
+  font-family: var(--font-mono); font-size:.78rem; color: var(--ink-faint);
+  margin-bottom: 22px; display:flex; gap:8px; flex-wrap:wrap;
+}
+.breadcrumb a:hover{ color: var(--grass-dark); }
+
+.addon-hero{
+  display:grid; grid-template-columns: 1.1fr .9fr; gap:36px; align-items:start;
+  margin-bottom: 40px;
+}
+.addon-hero-media{
+  aspect-ratio: 16/10; border-radius: var(--radius-lg); overflow:hidden;
+  background: var(--bg-alt); border:1px solid var(--border);
+  clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 30px, 100% 100%, 0 100%);
+}
+.addon-hero-media img{ width:100%; height:100%; object-fit:cover; }
+
+.addon-hero-info .addon-category{
+  font-family: var(--font-mono); font-size:.72rem; text-transform:uppercase; letter-spacing:.1em;
+  color: var(--dirt); font-weight:700; margin-bottom:10px; display:block;
+}
+.addon-hero-info h1{ font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom:12px; }
+.addon-hero-info .addon-desc{ color: var(--ink-soft); font-size:1.02rem; margin-bottom:22px; }
+
+.addon-stats{
+  display:flex; flex-wrap:wrap; gap:22px; margin-bottom:24px; font-family: var(--font-mono); font-size:.82rem;
+}
+.addon-stats .stat b{ display:block; font-family: var(--font-body); font-weight:800; font-size:1.05rem; color: var(--ink); }
+.addon-stats .stat span{ color: var(--ink-faint); }
+
+.addon-actions{ display:flex; gap:12px; flex-wrap:wrap; margin-bottom:20px; }
+
+.addon-tags{ display:flex; flex-wrap:wrap; gap:8px; }
+.tag{
+  font-family: var(--font-mono); font-size:.72rem; padding:5px 10px; border-radius:999px;
+  background: var(--grass-tint); color: var(--grass-dark); font-weight:600;
+}
+
+.addon-body{
+  display:grid; grid-template-columns: 2fr 1fr; gap: 40px; align-items:start;
+}
+.addon-content{
+  background: var(--surface); border:1px solid var(--border); border-radius: var(--radius-lg);
+  padding: 28px; min-height: 160px;
+}
+.addon-content h2{ font-size:1.3rem; margin-bottom:12px; }
+.addon-content p{ color: var(--ink-soft); margin-bottom:12px; }
+
+.addon-sidebar{
+  background: var(--surface); border:1px solid var(--border); border-radius: var(--radius-lg);
+  padding: 22px; display:flex; flex-direction:column; gap:14px;
+}
+.addon-sidebar .row{ display:flex; justify-content:space-between; font-size:.88rem; padding:8px 0; border-bottom:1px dashed var(--border); }
+.addon-sidebar .row:last-child{ border-bottom:none; }
+.addon-sidebar .row span:first-child{ color: var(--ink-faint); }
+.addon-sidebar .row span:last-child{ font-weight:700; }
+
+.related-strip{ margin-top: 56px; }
+
+@media (max-width: 860px){
+  .addon-hero{ grid-template-columns: 1fr; }
+  .addon-body{ grid-template-columns: 1fr; }
+}
